@@ -37,7 +37,7 @@ const Getacare = () => {
                 <Button className="learn-more ms-4 mt-4">Find a Doctor</Button>
             </Col>
             <Col  lg={6} md={6} sm={12} className="text-center mt-4 mb-4">
-                <h4 className="text-center fw-bold"><i class="fab fa-edge-legacy fa-2x"></i>eVisit</h4>
+                <h4 className="text-center fw-bold"><i className="fab fa-edge-legacy fa-2x"></i>eVisit</h4>
                 <h5 className="text-info mt-4">Estimated cost: $40</h5>
                 <h5>What can be treated at a virtual care eVisit?</h5>
                 <li> Cold, flu and allergies</li>
