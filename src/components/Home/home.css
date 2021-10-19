@@ -1,0 +1,30 @@
+.homeh{
+    line-height: 1.1;
+    font-size: 3rem;
+    color: #1a7595 ;
+    letter-spacing: -2px;
+    text-shadow: 0 13.36px 8.896px #6b6ec0,0 -2px 1px #484848,0 -2px 1px ;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+#homep{
+    font-size: 20px;
+    font-weight: 500;
+}
+.learn-more{
+    font-size: 20px;
+    padding-top: 1.25rem;
+    padding-right: 2.5rem;
+    padding-bottom: 1.25rem;
+    padding-left: 2.5rem;
+    background-color: #1a7595;
+    color: #f4f8fa;
+    border-radius: 2px;
+}
+.fa-book-medical{
+    color: rgb(255, 255, 255);
+}
+.brands{
+    font-size: 25px;
+    font-weight: 700;
+}

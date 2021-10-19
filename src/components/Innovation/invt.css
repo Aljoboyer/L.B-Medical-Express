@@ -1,0 +1,14 @@
+.fa-chevron-right{
+    color: white;
+}
+.invt-contain h1 {
+    cursor: pointer;
+}
+.invt-contain{
+    background-color: #02567e;
+    background-image: radial-gradient(circle,#02567e 0,#001631 100%); ;
+}
+.colam:hover{
+   background-color: rgba(255, 255, 255, 0.268);
+   transition: 1.5s ease-in-out;
+}
