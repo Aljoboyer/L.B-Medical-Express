@@ -5,10 +5,13 @@ import abulance from '../../asset/image/abmulances.jpg';
 import { useForm } from "react-hook-form";
 import '../Form/Form.css'
 import doctor from '../../asset/image/doctor.jpg'
+import Header from '../Header/Header';
+import Getcareform from './Getcareform';
 const Getacare = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     return (
         <div className="container-fluid">
+            <Header></Header>
             <Row className="p-4 mb-4 mt-2">
                 <h1 className="title2 text-center">Virtual Care</h1>
                 <h3 className="text-center text-info">We're making it easy for you
@@ -51,16 +54,9 @@ const Getacare = () => {
             </Col>
             </Row>
             <Row id="doctor" className="justify-content-center">
-                <h1 className="text-light fw-bold fs-1 mt-4 mb-4 text-center">Make An Online Doctors Appointment</h1>
+                <h1 className="text-light fw-bold fs-1 mt-4 mb-4 text-center">Emergency Doctors Appointment</h1>
                 <Col  className="mb-4"  lg={6} md={6} sm={12}>
-                <Contactform>
-                         <label htmlFor="">Doctor Name</label>
-                        <input className="w-100" type="text" {...register("text", { required: true })} />
-
-                        <label htmlFor="">Doctor Speciality</label>
-                        <input className="w-100" type="text" {...register("location", { required: true })} />
-
-                </Contactform>
+                    <Getcareform></Getcareform>
                 </Col>
                 <Col lg={6} md={6} sm={12}>
                     <img className="h-75 w-100 mt-4 rounded" src={doctor} alt="" />

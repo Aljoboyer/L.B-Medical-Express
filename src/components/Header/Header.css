@@ -9,3 +9,6 @@
     border-radius: 3px;
     
 }
+.navdrop:hover{
+    background-color: rgba(34, 203, 255, 0.412);
+}

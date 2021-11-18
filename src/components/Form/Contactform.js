@@ -1,20 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Col, Row} from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
-const Contactform = (props) => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+const MySwal = withReactContent(Swal);
 
+const Contactform = ({img,children}) => {
+    const { register,reset, handleSubmit, watch, formState: { errors } } = useForm();
+
+    const onSubmit = data => {
+        data.img = img;
+        data.status = 'Pending';
+        data.postdate = new Date().toLocaleDateString()
+        fetch('http://localhost:5000/getservice', {
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(service => {
+            if(service.insertedId)
+            {
+                Swal.fire(
+                    'Your Request Sended',
+                    'Please Wait We will Response',
+                    'success'
+                  )
+                reset()
+            }
+        })
+        
+    }
     return (
         <div className="container-fluid forms">
         <Row className="justify-content-center" >
             <Col lg={8} md={6} sm={12} className="login-form mt-4 p-4">
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <h2 className="title text-center">Fill Up Your Form</h2>
-                        <label htmlFor="">Name</label>
-                        <input className="w-100" type="text" {...register("text", { required: true })} />
-                        {props.children}
-                        <label htmlFor="">Location</label>
+                        <label htmlFor="">Patient Name</label>
+                        <input className="w-100" type="text" {...register("patientname", { required: true })} />
+                        {children}
+                        <label htmlFor="">Patient Location</label>
                         <input className="w-100" type="text" {...register("location", { required: true })} />
 
                         <label htmlFor="">Email</label>
@@ -23,14 +52,18 @@ const Contactform = (props) => {
                         <label htmlFor="">Phone Number</label>
                         <input className="w-100" type ="number" {...register("number", { required: true })} />
 
-                        <label htmlFor="">Describe Concisly Your Problem</label>
-                        <input className="w-100" type="text" {...register("text", { required: true })} />
+                        <label htmlFor="">Service Name</label>
+                        <input className="w-100" type ="text" {...register("servicename", { required: true })} />
 
-                        <input className="buttonss" type="button" value="Send" />
+                        <label htmlFor="">Describe Concisly Your Problem</label>
+                        <input className="w-100" type="text" {...register("suffix", { required: true })} />
+
+                        <input className="buttonss" type="submit" value="Send" />
                 </form>
 
             </Col>
         </Row>
+
     </div>
     );
 };

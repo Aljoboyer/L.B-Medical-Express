@@ -1,0 +1,11 @@
+
+@media only screen and (max-width:688px) {
+    .sidelist{
+        display: none;
+    }
+    .dashlist{
+        font-size: 10px;
+        font-weight: 500;
+        margin-top: 5px;
+    }
+}
