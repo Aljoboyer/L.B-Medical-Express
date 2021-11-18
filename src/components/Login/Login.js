@@ -45,7 +45,7 @@ const Login = () => {
         <Row className="justify-content-center" >
             <Col lg={6} md={8} sm={12} className="login-form mt-4 p-4">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <h2 className="title text-center">Log-in Here</h2>
+                <h2 className="title text-center">Log-in Here LB</h2>
                 <p className="text-danger"><b>{error}</b></p>
                         <label htmlFor="">Email</label>
                         <input className="w-100" type="email" {...register("email", { required: true })} />
