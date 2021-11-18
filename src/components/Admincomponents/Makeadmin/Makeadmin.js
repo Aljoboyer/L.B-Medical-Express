@@ -12,7 +12,7 @@ const Makeadmin = () => {
         setAdmin(e.target.value)
     }
     const SubmitHandler = e => {
-        fetch(`http://localhost:5000/user?email=${admin}`, {
+        fetch(`https://obscure-caverns-42480.herokuapp.com/user?email=${admin}`, {
             method: 'PUT',
             headers:{
                 'content-type':'application/json'

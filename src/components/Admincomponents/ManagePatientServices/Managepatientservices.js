@@ -17,7 +17,7 @@ const Managepatientservices = () => {
     
 
     useEffect(() => {
-        fetch('http://localhost:5000/allpatientservice')
+        fetch('https://obscure-caverns-42480.herokuapp.com/allpatientservice')
         .then(res => res.json())
         .then(data => setMyservices(data))
     },[demo])
@@ -28,7 +28,7 @@ const Managepatientservices = () => {
         setDeleteid(id)
         if(isdelete)
         {
-            fetch(`http://localhost:5000/patientdeleteservice/${id}`,{
+            fetch(`https://obscure-caverns-42480.herokuapp.com/patientdeleteservice/${id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())
@@ -45,7 +45,7 @@ const Managepatientservices = () => {
     }
 
     const AcceptHanlder = id => {
-        fetch(`http://localhost:5000/acceptpatinetservice/${id}`,{
+        fetch(`https://obscure-caverns-42480.herokuapp.com/acceptpatinetservice/${id}`,{
             method: 'PUT'  
         })
         .then(res => res.json())

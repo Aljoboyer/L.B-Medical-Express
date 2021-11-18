@@ -8,13 +8,13 @@ const ServicesUse = () => {
     const size = 4;
     const [demo,setDemo] = useState(0)
     useEffect(() => {
-      fetch('http://localhost:5000/services')
+      fetch('https://obscure-caverns-42480.herokuapp.com/services')
       .then(res => res.json())
       .then(data => setServices(data))
     },[])
 
     useEffect(() => {
-      fetch(`http://localhost:5000/manageservices?page=${pageno}&&size=${size}`)
+      fetch(`https://obscure-caverns-42480.herokuapp.com/manageservices?page=${pageno}&&size=${size}`)
       .then(res => res.json())
       .then(data =>{
           const count = data.count

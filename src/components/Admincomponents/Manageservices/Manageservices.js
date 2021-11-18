@@ -15,7 +15,7 @@ const Manageservices = () => {
         setDeleteid(id)
         if(isdelete)
         {
-            fetch(`http://localhost:5000/services/${id}`,{
+            fetch(`https://obscure-caverns-42480.herokuapp.com/services/${id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())

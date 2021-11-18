@@ -13,7 +13,7 @@ const Myappointment = () => {
     const [deleteid, setDeleteid] = useState(null)
 console.log(myservices)
     useEffect(() => {
-        fetch(`http://localhost:5000/patientappointment?email=${user.email}`,{
+        fetch(`https://obscure-caverns-42480.herokuapp.com/patientappointment?email=${user.email}`,{
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('idtoken')}`
             }
@@ -28,7 +28,7 @@ console.log(myservices)
         setDeleteid(id)
         if(isdelete)
         {
-            fetch(`http://localhost:5000/deleteappointment/${id}`,{
+            fetch(`https://obscure-caverns-42480.herokuapp.com/deleteappointment/${id}`,{
                 method: 'DELETE'
             })
             .then(res => res)

@@ -14,7 +14,7 @@ const Yourservices = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:5000/patientservice?email=${user.email}`,{
+        fetch(`https://obscure-caverns-42480.herokuapp.com/patientservice?email=${user.email}`,{
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('idtoken')}`
             }
@@ -29,7 +29,7 @@ const Yourservices = () => {
         setDeleteid(id)
         if(isdelete)
         {
-            fetch(`http://localhost:5000/deleteservice/${id}`,{
+            fetch(`https://obscure-caverns-42480.herokuapp.com/deleteservice/${id}`,{
                 method: 'DELETE'
             })
             .then(res => res)

@@ -17,7 +17,7 @@ const Patientappointments = () => {
     
 
     useEffect(() => {
-        fetch('http://localhost:5000/admingetappointment')
+        fetch('https://obscure-caverns-42480.herokuapp.com/admingetappointment')
         .then(res => res.json())
         .then(data => setMyservices(data))
     },[demo])
@@ -28,7 +28,7 @@ const Patientappointments = () => {
         setDeleteid(id)
         if(isdelete)
         {
-            fetch(`http://localhost:5000/admingetappointment/${id}`,{
+            fetch(`https://obscure-caverns-42480.herokuapp.com/admingetappointment/${id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())
@@ -45,7 +45,7 @@ const Patientappointments = () => {
     }
 
     const AcceptHanlder = id => {
-        fetch(`http://localhost:5000/admingetappointment/${id}`,{
+        fetch(`https://obscure-caverns-42480.herokuapp.com/admingetappointment/${id}`,{
             method: 'PUT'  
         })
         .then(res => res.json())

@@ -35,7 +35,7 @@ const Addservice = () => {
         fd.append('short', servicedata.short);
         fd.append('details', servicedata.details);
 
-        fetch('http://localhost:5000/services',{
+        fetch('https://obscure-caverns-42480.herokuapp.com/services',{
             method: 'POST',
             body: fd
         })

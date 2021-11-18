@@ -15,7 +15,7 @@ const Details = () => {
     const {user} = useAuth()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceID}`)
+        fetch(`https://obscure-caverns-42480.herokuapp.com/services/${serviceID}`)
         .then(res => res.json())
         .then(data => setServices(data))
     },[services,serviceID])

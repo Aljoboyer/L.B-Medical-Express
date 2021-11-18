@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDUnDEqTFSO3LDe7S8NxxWAepIVVtYich4",
-    authDomain: "lifebridge-medical-express.firebaseapp.com",
-    projectId: "lifebridge-medical-express",
-    storageBucket: "lifebridge-medical-express.appspot.com",
-    messagingSenderId: "138795046821",
-    appId: "1:138795046821:web:69eee2f8d13fec38013a4c"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY, 
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN, 
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID, 
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET, 
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID, 
+    appId: process.env.REACT_APP_FIREBASE_APP_ID, 
   };
 
   export default firebaseConfig

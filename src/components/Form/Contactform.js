@@ -13,7 +13,7 @@ const Contactform = ({img,children}) => {
         data.img = img;
         data.status = 'Pending';
         data.postdate = new Date().toLocaleDateString()
-        fetch('http://localhost:5000/getservice', {
+        fetch('https://obscure-caverns-42480.herokuapp.com/getservice', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

@@ -20,7 +20,7 @@ const Appointmentmodal = ({appointshow,onHide,appoint,startDate}) => {
     }
     const handleSubmit = e => {
       const appointInfo ={...appointdata, date:startDate.toLocaleDateString(), time:time, appoinmentName:name, status: 'Pending'}
-      fetch('http://localhost:5000/appointments', {
+      fetch('https://obscure-caverns-42480.herokuapp.com/appointments', {
         method: 'POST',
         headers:{
           'content-type':'application/json'
