@@ -35,7 +35,7 @@ const Details = () => {
                     </Col>
                     <Col lg={6} sm={12} md={6}>
                         <h1 className="title text-center text-success">To Book This Service</h1>
-                    <Contactform img={services.img}></Contactform>
+                    <Contactform services={services}></Contactform>
                     </Col>
             </Row> :   <Spinner animation="border" variant="dark" />
  

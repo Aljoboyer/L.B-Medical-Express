@@ -1,0 +1,6 @@
+.checkouts{
+    border-left: solid 10px;
+    border-image: linear-gradient(black);
+    border-radius: 15px;
+    background-image: linear-gradient(rgb(154, 174, 255),rgb(228, 211, 211));
+}

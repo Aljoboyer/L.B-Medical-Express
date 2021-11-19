@@ -6,14 +6,17 @@ import withReactContent from 'sweetalert2-react-content'
 
 const MySwal = withReactContent(Swal);
 
-const Contactform = ({img,children}) => {
+const Contactform = ({services,children}) => {
     const { register,reset, handleSubmit, watch, formState: { errors } } = useForm();
-
+    const {img,price} = services;
+    
     const onSubmit = data => {
         data.img = img;
         data.status = 'Pending';
+        data.price = price;
+        data.category = 'Service'
         data.postdate = new Date().toLocaleDateString()
-        fetch('https://obscure-caverns-42480.herokuapp.com/getservice', {
+        fetch('https://obscure-caverns-42480.herokuapp.com/appointments', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

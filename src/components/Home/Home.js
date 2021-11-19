@@ -10,6 +10,7 @@ import Header from '../Header/Header'
 import Locationmap from '../Locationmap/Locationmap';
 import { Link } from 'react-router-dom';
 import Ourblog from './Ourblogslide/Ourblog.';
+import Information from './Information/Information';
 
 const Home = () => {
     return (
@@ -25,6 +26,7 @@ const Home = () => {
                     <Homeslide></Homeslide>
                 </Col>
             </Row>
+            <Information></Information>
             <Services></Services>
             <Innovating></Innovating>
             <WhyYouchoose></WhyYouchoose>

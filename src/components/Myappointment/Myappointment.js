@@ -11,16 +11,17 @@ const Myappointment = () => {
     const [deleteshow, setDeleteshow] = useState(false);
     const [isdelete, setIsdelete] = useState(false)
     const [deleteid, setDeleteid] = useState(null)
-console.log(myservices)
+    const category = 'Appointment';
+
     useEffect(() => {
-        fetch(`https://obscure-caverns-42480.herokuapp.com/patientappointment?email=${user.email}`,{
+        fetch(`https://obscure-caverns-42480.herokuapp.com/patientappointment?email=${user.email}&&category=${category}`,{
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('idtoken')}`
             }
         })
         .then(res => res.json())
         .then(data => setMyservices(data))
-    },[user.email,demo]);
+    },[user,demo]);
 
     const ServiceDeleteHandler = (id, isshow) => {
         setDeleteshow(isshow)

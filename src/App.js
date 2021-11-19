@@ -21,6 +21,7 @@ import Yourservices from './components/Yourservices/Yourservices';
 import Admindashboard from './components/Admincomponents/AdminDashboard/Admindashboard';
 import Getappointment from './components/Getappointment/Getappointment';
 import Myappointment from './components/Myappointment/Myappointment';
+import Payments from './components/Paymentsystem/Payments';
 function App() {
 
   return (
@@ -58,6 +59,9 @@ function App() {
                       </Privateroute>
                       <Route exact path="/myappoinment">
                         <Myappointment></Myappointment>
+                        </Route>
+                        <Route exact path="/payments/:id">
+                            <Payments></Payments>
                         </Route>
                     <Route exact path="*">
                         <Notfound></Notfound>

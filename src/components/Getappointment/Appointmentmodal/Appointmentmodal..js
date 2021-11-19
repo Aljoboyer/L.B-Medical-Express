@@ -7,7 +7,7 @@ const MySwal = withReactContent(Swal);
 
 const Appointmentmodal = ({appointshow,onHide,appoint,startDate}) => {
     const [appointdata, setAppointmentdata] = useState({});
-    const {name,time} = appoint;
+    const {name,time,price} = appoint;
 
 
     const OnBlurHanlder = e => {
@@ -19,7 +19,7 @@ const Appointmentmodal = ({appointshow,onHide,appoint,startDate}) => {
       setAppointmentdata(newdata)
     }
     const handleSubmit = e => {
-      const appointInfo ={...appointdata, date:startDate.toLocaleDateString(), time:time, appoinmentName:name, status: 'Pending'}
+      const appointInfo ={...appointdata, date:startDate.toLocaleDateString(), time:time, price: price, appoinmentName:name, status: 'Pending', category: 'Appointment'}
       fetch('https://obscure-caverns-42480.herokuapp.com/appointments', {
         method: 'POST',
         headers:{
