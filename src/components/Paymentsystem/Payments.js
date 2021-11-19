@@ -12,7 +12,7 @@ const Payments = () => {
     const [paydata,setPaydata] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/payappointment/${id}`)
+        fetch(`https://obscure-caverns-42480.herokuapp.com/payappointment/${id}`)
         .then(res => res.json())
         .then(data => setPaydata(data))
     },[id])

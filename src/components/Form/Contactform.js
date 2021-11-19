@@ -9,9 +9,8 @@ const MySwal = withReactContent(Swal);
 const Contactform = ({services,children}) => {
     const { register,reset, handleSubmit, watch, formState: { errors } } = useForm();
     const {img,price} = services;
-    
+   
     const onSubmit = data => {
-        data.img = img;
         data.status = 'Pending';
         data.price = price;
         data.category = 'Service'

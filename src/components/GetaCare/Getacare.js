@@ -7,6 +7,7 @@ import '../Form/Form.css'
 import doctor from '../../asset/image/doctor.jpg'
 import Header from '../Header/Header';
 import Getcareform from './Getcareform';
+import Ambulanceform from './Ambulanceform';
 const Getacare = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     return (
@@ -66,8 +67,7 @@ const Getacare = () => {
                 <h1 className="title2 text-bold text-center mt-4 mb-4">Book Ambulance</h1>
                 <p className="text-center mt-2"><b>Please provide the following information to book an ambulance. Ensure that your mobile number is correct. URAL will send SMS to your mobile to authenticate. Our support will reach you the soonest possible.</b></p>
                 <Col lg={7} md={6} sm={12}>
-                <Contactform>
-                </Contactform>
+                    <Ambulanceform></Ambulanceform>
                 </Col>
                 <Col className="mt-2" lg={5} md={6} sm={12}>
                     <img className="w-100 h-100 rounded" src={abulance} alt="" />
