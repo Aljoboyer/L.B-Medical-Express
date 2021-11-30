@@ -100,7 +100,7 @@ const useFirebase = () => {
       useEffect(() => {
         if(user.email)
         {
-          fetch(`http://localhost:5000/admincheck?email=${user.email}`)
+          fetch(`https://obscure-caverns-42480.herokuapp.com/admincheck?email=${user.email}`)
         .then(res => res.json())
         .then(data => {
           setIsadmin(data.admin)
@@ -111,7 +111,7 @@ const useFirebase = () => {
       //saving user to data base
       const SaveUser = (email, name) =>{
         const newuser = {email, name}
-        fetch('http://localhost:5000/users',{
+        fetch('https://obscure-caverns-42480.herokuapp.com/users',{
           method: 'POST',
           headers:{
             'content-type':'application/json'

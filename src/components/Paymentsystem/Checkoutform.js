@@ -77,7 +77,7 @@ const Checkoutform = ({paydata}) => {
               '',
               'error'
             )
-              console.log();
+              
           }
           else{
             setProcessing(false)

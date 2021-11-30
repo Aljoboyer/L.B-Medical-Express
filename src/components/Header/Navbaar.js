@@ -20,17 +20,14 @@ const Navbaar = () => {
                 <Nav.Link className="fs-6 fw-bold navss text-light" as={Link} to="/" >Home</Nav.Link>
                 <Nav.Link className="fs-6 fw-bold navss " as={Link} to="/visitors">Patients And Vistors</Nav.Link>
                 <Nav.Link className="fs-6 fw-bold navss " as={Link} to="/getacare">Get a Care</Nav.Link>
+               
                 {
-                   user.email ? <> { isadmin ? <Nav.Link className="fs-6 fw-bold navss " as={Link} to="/admindashboard">Dashboard</Nav.Link> : ''}</> : ''
-                }
-                {
-                    user.email ? <>{isadmin ? '' : <><NavDropdown className="fs-6 fw-bold navss text-light" title="Your Activities" id="collasible-nav-dropdown">
+                    user.email ? <>{isadmin ? <Nav.Link className="fs-6 fw-bold navss " as={Link} to="/admindashboard">Dashboard</Nav.Link> : <><NavDropdown className="fs-6 fw-bold navss text-light" title="Your Activities" id="collasible-nav-dropdown">
                     <NavDropdown.Item  className="navdrop"  as={Link} to="/yourservices">MY Service</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item  className="navdrop"  as={Link} to="/myappoinment">MY Appointment</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item className="navdrop">Payment History</NavDropdown.Item>
-                   
                   </NavDropdown> <Nav.Link className="fs-6 fw-bold navss " as={Link} to="/getappointment">Get Appointment</Nav.Link></>}</> : ''
                 }
                 </Nav>
